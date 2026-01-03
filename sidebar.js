@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded",(event)=>
 {
     document.body.innerHTML=
     `
-        <div class="sidebar" style="width:220px; display:inline-block;">
+        <div class="sidebar" id="sidebar" style="width:220px; display:inline-block;">
             <div class="box" style="width:100%;">
                 <img src="/images/logo.png"><br>
                 welcome to <a href="">freefilesvirus.com</a>
             </div>
-            <div class="box" style="width:100%;">
+            <div class="subbox" style="width:100%;">
                 <b>links</b><br>
                 <div id="linksholder" style="width:100%; text-align:left;"></div>
             </div>
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded",(event)=>
     const motp=document.getElementById("motp");
     if (motp)
     {
-        document.getElementById("motpholder").innerHTML="<b>MESSAGE OF THE PAGE</b><br>"+motp.innerHTML;
+        document.getElementById("motpholder").innerHTML="<b>message of the page</b><br>"+motp.innerHTML;
         motp.remove();
     }
     else
