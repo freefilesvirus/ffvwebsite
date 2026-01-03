@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>freefilesvirus</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <script src="/sidebar.js"></script>
+    <script src="/ylwtheme.js"></script>
+    <script src="/markexternallinks.js"></script>
+
+    <body>
+        <main></main>
+    </body>
+
+    <a id="motp">
+        my main bread and butter...<br>
+        one day ill have a game on steam and not just itch. save me, laurcey
+    </a>
+
+    <script>
+        const games=
+        [
+            {
+                name:"Magic Mason",
+                date:"12/17/25",
+                link:"https://sayl3n.itch.io/magic-mason",
+                image:"https://img.itch.zone/aW1nLzI0NjAxMzIwLmpwZw==/315x250%23c/RtI%2Bdv.jpg",
+                text:"you can tell its another school project from how the name is capitalized and not completely insane<br>build a bridge with some blocks or something, get to tower"
+            },
+            {
+                name:"Corn Run",
+                date:"11/19/25",
+                link:"https://microbesun.itch.io/corn-run",
+                image:"https://img.itch.zone/aW1nLzI0MTYzMTMyLnBuZw==/315x250%23c/5mWnxd.png",
+                text:"made also also also for school. but that sentence is only funny if you read these in reverse chronological order which you probably arent<br>my first colaborative project, and it was a lot of fun! thanks CALLIE, AMY, KELSY, JACK, GOOD MICHAEL, and especially EVIL MICHAEL"
+            },
+            {
+                name:"worm desktop pet",
+                date:"10/17/25",
+                link:"https://freefilesvirus.itch.io/worm-desktop-pet",
+                image:"https://img.itch.zone/aW1nLzIzNjQ4MTE0LnBuZw==/315x250%23c/qXt99M.png",
+                text:"this is..... a game....<br>made also in school, but when i had free time after finishing BULLETHELI<br>pin a worm to your screen and smack it against a wall. what else could you want from a desktop pet?"
+            },
+            {
+                name:"BULLETHELI",
+                date:"10/8/25",
+                link:"https://freefilesvirus.itch.io/bulletheli-pshf",
+                image:"https://img.itch.zone/aW1nLzIzNTI2NzczLnBuZw==/315x250%23c/jpcU4m.png",
+                text:"buzz. caw. i specialize in bug games.<br>a bullethell(i) where you control your guy by moving the mouse around<br>made for school but i should clarify im in a programming class, not a game design class<br>i still think its fun though. so does amy. so I WIN"
+            },
+            {
+                name:"DAVEY vs THE BIG GUY",
+                date:"8/15/25",
+                link:"https://freefilesvirus.itch.io/davey-vs-the-big-guy",
+                image:"https://img.itch.zone/aW1nLzIyNzQ2NTQxLnBuZw==/315x250%23c/JfoeCA.png",
+                alt:"i love how badly hes missing in this lol",
+                text:"made in 5ish days for godot wild jam 84 with the theme critters<br>stack up crit(ters(?)) by hitting the qtes to hit the big guy for big damage<br><br>DAVEY WILL RETURN..."
+            },
+            {
+                name:"PHILIP through the wall",
+                date:"2/8/25",
+                link:"https://freefilesvirus.itch.io/philip-ttw",
+                image:"https://img.itch.zone/aW1nLzE5Nzc2ODE5LnBuZw==/315x250%23c/bkkTYR.png",
+                alt:"he wears a bucket hat to hide his dorsal fin",
+                text:"philip grew some eyes, eyebrows, and a hat for this new title and is ready to keep solving puzzles that are slightly better than the puzzles that sucked from the original"
+            },
+            {
+                name:"amateur juggling act",
+                date:"7/31/24",
+                link:"https://freefilesvirus.itch.io/amateur-juggling-act",
+                image:"https://img.itch.zone/aW1nLzE3MTY0NTQyLnBuZw==/315x250%23c/6NhH5l.png",
+                text:"its not really great, but id feel bad leaving it out of the list... its my first itch post after all!"
+            }
+        ];
+
+        //315
+        const gameHolder=document.getElementsByTagName("main")[0];
+        games.forEach((gameData)=>
+        {
+            console.log(gameData);
+            const game=document.createElement("div");
+            gameHolder.appendChild(game);
+
+            game.className="subbox";
+            game.style.width="330px";
+
+            game.innerHTML=
+            `
+                <a href="${gameData.link}">
+                    <b>${gameData.name}</b><br>
+                    <img src="${gameData.image}" title="${("alt" in gameData)?gameData.alt:""}">
+                </a><br>
+                published ${gameData.date}<br><br>
+
+                ${gameData.text}
+            `;
+        });
+    </script>
+</html>

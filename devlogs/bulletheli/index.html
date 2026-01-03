@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>freefilesvirus</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <script src="/sidebar.js"></script>
+    <script src="/ylwtheme.js"></script>
+    <script src="/markexternallinks.js"></script>
+
+    <body>
+        <main>
+            <div class="box">
+                <a href="https://freefilesvirus.itch.io/bulletheli-pshf">play the game first</a><br><br>
+                
+                call me freefliesvirus. what am i meant to put here again?<br><br>
+                
+                bulletheli was made as a school project, i made it in c++ with raylib and no game engine<br>
+                i modelled all my systems after how i remember godots working except simpler, then had to go through near every file 2 different times because i made it too simple<br>
+                i had nodes, sprites, something that worked like an area2d. i set up transform children, drawing with the correct z index. i arranged the meeting, i arranged the menu, the venue, the seating<br><br>
+                
+                it ended up pretty simple still. at the back there were three interconnected types, node, game, and scene. the latter two inherit the former<br>
+                node could have children and had update/draw functions to be overridden<br>
+                game handled sorting the draw order and calling those update/draw functions. it would always update children of itself even if they arent in a scene. it had two variables for scenes, current and waiting, that werent children. at the end of the update loop if theres a waiting scene itll kill the current scene and replace it<br>
+                scene was just like a node. but it was important for game and nodes have a function to get the current scene theyre under<br>
+                everything else fizzles out into not being connected. i made a bunch of base parts i arranged together into more complicated pieces<br>
+                the menu system was fun, it has tab navigation. i hooked right click in to work as tab since it wasnt being used anywhere else and teacher terry really liked the right click navigation<br><br>
+                
+                reading so boring... heres your visual treat. picture of old build<br>
+                <img src="old.png" title="i only have this screenshot cause i cranked up the number of bullets and sent the image to a friend"><br>
+                can you even find the fly?<br>
+                the oldest sprite that remains untouched are the health portraits. the fly, swatter, and bird sprites predate it but were all touched<br>
+                my last few days have been working a lot of visuals, trying to actually make it look presentable. better sprites, better colors. a fly that doesnt blend in<br>
+                i have a little respect for myself as a cartoonist<br><br>
+                
+                did you know visual studio has an image editor? i didnt. i dont even remember how i found it but i used it to make the sprites transparent since paint still doesnt have that<br><br>
+                
+                there was no planning for this game, i made stuff as i thought of it or as it came up. since it was made for school though there was a room full of people studying good game design i could pull from to test, and that includes their teacher. he made blood gulch for halo 1. the guy who made blood gulch said this was a great game<br>
+                or maybe he didnt say great, but something positive about it. he said it was too hard so i made fun of him in the settings menu<br>
+                i also dont legally own this game since i made it for school, so i cant merchadise or sell it without asking them very nicely which i probably wont do. sorry if you wanted a the fly pin<br><br>
+                
+                i hope its okay these are rambly. i mean, it is okay, this is my website and i can do whatever i want here. hopefully i never have to use this as a portfolio for business or anything though because i dont want to rewrite it all to not sound like a genuinely crazy person
+            </div>
+        </main>
+    </body>
+</html>

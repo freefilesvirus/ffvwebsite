@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>freefilesvirus</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <script src="/ylwtheme.js"></script>
+
+    <body>
+        <div class="box">
+            do you know where you are? i dont think you know where you are.<br>
+            go <a href="/">home,</a> kid.<br><br>
+
+            i would never have a page for <a id="finalpath">this</a>.
+        </div>
+    </body>
+
+    <script>
+        let splitPath=window.location.pathname.split("/");
+        splitPath.reverse();
+        for (let i in splitPath)
+        {
+            if (splitPath[i]!="")
+            {
+                document.getElementById("finalpath").textContent=splitPath[i];
+                break;
+            }
+        }
+    </script>
+</html>

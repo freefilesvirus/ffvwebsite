@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>freefilesvirus</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+
+    <script src="/sidebar.js"></script>
+    <script src="/ylwtheme.js"></script>
+    <script src="/markexternallinks.js"></script>
+
+    <body>
+        <main>
+        </main>
+    </body>
+
+    <a id="motp">these are all pretty rambly and probably not funny, but maybe interesting</a>
+
+    <script>
+        let devlogLinks=[];
+        sidebarLinks.forEach((linkData)=>
+        {
+           if (linkData.path=="devlogs")
+            {
+                devlogLinks=linkData.links;
+            } 
+        });
+
+        const devlogHolder=document.getElementsByTagName("main")[0];
+        devlogLinks.forEach((devlogData)=>
+        {
+            const devlog=document.createElement("div");
+            devlogHolder.appendChild(devlog);
+
+            devlog.className="subbox";
+
+            devlog.innerHTML=
+            `
+                <a href="${devlogData.path}">
+                    <b>${devlogData.alias}</b><br>
+                    <img src="${devlogData.path}/thumbnail.png">
+                </a>
+            `;
+        });
+    </script>
+</html>
