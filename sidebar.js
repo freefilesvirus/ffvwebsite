@@ -119,14 +119,4 @@ const sidebarLinks=
             },
         ]
     },
-    {
-        path:"https://www.youtube.com/@freefilesvirus/videos",
-        alias:"youtube",
-        fullPath:true
-    },
-    {
-        path:"https://discord.gg/eH3qYRRpfS",
-        alias:"discord",
-        fullPath:true
-    }
 ];
