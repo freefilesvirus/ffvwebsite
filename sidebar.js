@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",(event)=>
 {
     document.body.innerHTML=
     `
-        <div class="sidebar" id="sidebar" style="width:220px; display:inline-block;">
+        <div class="sidebar" id="sidebar" style="width:220px; display:inline-block; padding-right:7px;">
             <div class="box" style="width:100%;">
                 <img src="/images/logo.png"><br>
                 welcome to <a href="">freefilesvirus.com</a>
@@ -15,14 +15,9 @@ document.addEventListener("DOMContentLoaded",(event)=>
                 someones where they shouldnt be
             </div>
         </div>
-    `+document.body.innerHTML;
-
-    //fix main
-    const main=document.getElementsByTagName("main")[0];
-    if (main)
-    {
-        main.style.width="calc(100% - 235px)";
-    }
+    `+document.body.innerHTML+`
+        <div id="sidebarbalance" style="width:220px; display:inline-block;"></div>
+    `;
 
     //fix motp
     const motp=document.getElementById("motp");
@@ -90,24 +85,24 @@ const sidebarLinks=
             },
         ]
     },
-    {
-        path:"devlogs",
-        links:
-        [
-            {
-                path:"clubofutility",
-                alias:"CLUB OF UTILITY"
-            },
-            {
-                path:"bulletheli",
-                alias:"BULLETHELI"
-            },
-            {
-                path:"daveyvs",
-                alias:"DAVEY vs THE BIG GUY"
-            },
-        ]
-    },
+    // {
+    //     path:"devlogs",
+    //     links:
+    //     [
+    //         {
+    //             path:"clubofutility",
+    //             alias:"CLUB OF UTILITY"
+    //         },
+    //         {
+    //             path:"bulletheli",
+    //             alias:"BULLETHELI"
+    //         },
+    //         {
+    //             path:"daveyvs",
+    //             alias:"DAVEY vs THE BIG GUY"
+    //         },
+    //     ]
+    // },
     {
         path:"filedump",
         alias:"file dump",

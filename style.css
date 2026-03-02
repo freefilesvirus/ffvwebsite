@@ -19,20 +19,17 @@ body
 
     font-size:12px;
     
+    text-align:center;
+
     margin:5px;
 }
 
 main
 {
-    display:inline-block;
-    vertical-align:top;
-    
-    margin-left:7px;
-
-    text-align:center;
+    width:720px;
 }
 
-.sidebar,.box,.subbox
+.sidebar,.box,.subbox,main
 {
     text-align:center;
 
@@ -42,11 +39,11 @@ main
     box-sizing:border-box;
 }
 
-.box,.subbox
+.box,.subbox,.decoratedMain
 {
     padding:5px;
     margin:5px;
-    
+
     background-blend-mode:multiply;
 
     border-style:solid;
@@ -54,7 +51,7 @@ main
     border-color:var(--border-color);
 }
 
-.box
+.box,.decoratedMain
 {
     background-image:url("images/argyle.png");
     background-color:var(--menu-color);
