@@ -57,12 +57,9 @@ document.addEventListener("DOMContentLoaded",(event)=>
                 link.href=linkData.fullPath?linkData.path:path+linkData.path;
             }
 
-            if (window.location.pathname.startsWith(path+linkData.path))
+            if ("links" in linkData)
             {
-                if ("links" in linkData)
-                {
-                    buildLinksRecursive(path+linkData.path+"/",linkData.links);
-                }
+                buildLinksRecursive(path+linkData.path+"/",linkData.links);
             }
         }
     }
