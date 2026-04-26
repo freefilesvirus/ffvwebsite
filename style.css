@@ -5,6 +5,8 @@
     --link-color:#000000;
     --submenu-color:#ffea7c;
     --text-color:#000000;
+
+    image-rendering:crisp-edges;
 }
 
 a:link,a:visited,a:hover,a:active
