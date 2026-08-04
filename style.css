@@ -5,6 +5,8 @@
     --link-color:#000000;
     --submenu-color:#ffea7c;
     --text-color:#000000;
+
+    image-rendering:crisp-edges;
 }
 
 a:link,a:visited,a:hover,a:active
@@ -17,6 +19,7 @@ body
     color:var(--text-color);
     background-color:var(--menu-color);
 
+	font-family:"Times New Roman";
     font-size:12px;
     
     text-align:center;
