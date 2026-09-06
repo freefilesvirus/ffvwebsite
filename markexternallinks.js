@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",(event)=>
 {
     document.querySelectorAll("a").forEach((text)=>
     {
-        if (text.href.includes(window.location.hostname))
+        if (text.href.includes(window.location.hostname) || text.href=="")
         {
             return;
         }
