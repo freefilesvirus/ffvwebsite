@@ -9,11 +9,6 @@
 	image-rendering:crisp-edges;
 }
 
-a:link,a:visited,a:hover,a:active
-{
-	color:var(--link-color);
-}
-
 html
 {
 	height:100%;
