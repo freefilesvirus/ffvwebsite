@@ -1,114 +1,124 @@
 document.addEventListener("DOMContentLoaded",(event)=>
 {
-    document.body.innerHTML=
-    `
-        <div class="sidebar" id="sidebar" style="width:220px; display:inline-block; padding-right:7px;">
-            <div class="box" style="width:100%;">
-                <img src="/images/logo.png"><br>
-                welcome to <a href="">freefilesvirus.com</a>
-            </div>
-            <div class="subbox" style="width:100%;">
-                <b>links</b><br>
-                <div id="linksholder" style="width:100%; text-align:left;"></div>
-            </div>
-            <div class="subbox" id="motpholder" style="width:100%;">
-                someones where they shouldnt be
-            </div>
-        </div>
-    `+document.body.innerHTML+`
-        <div id="sidebarbalance" style="width:220px; display:inline-block;"></div>
-    `;
+	document.body.innerHTML=
+	`
+		<div class="sidebar" id="sidebar" style="width:220px; padding-right:7px;">
+			<div class="box" style="width:100%;">
+				<img src="/images/logo.png"><br>
+				welcome to <a href="">freefilesvirus.com</a>
+			</div>
+			<div class="subbox" style="width:100%;">
+				<b>links</b><br>
+				<div id="linksholder" style="width:100%; text-align:left;"></div>
+			</div>
+			<div class="subbox" id="motpholder" style="width:100%;">
+			</div>
+		</div>
+	`+document.body.innerHTML+`
+		<div class="fadingSidebar" id="sidebarBalance" style="width:220px;">
+			<div class="box" id="artSidebar" style="width:220px; height:calc(100vh - 20px); position:fixed; left:calc(50% + 365px); background-color:#ffffff;">
+				<!-- the most convoluted css ive ever written -->
+			</div>
+		</div>
+	`;
 
-    //fix motp
-    const motp=document.getElementById("motp");
-    if (motp)
-    {
-        document.getElementById("motpholder").innerHTML="<b>message of the page</b><br>"+motp.innerHTML;
-        motp.remove();
-    }
-    else
-    {
-        document.getElementById("motpholder").remove()
-    }
+	//fix motp
+	const motp=document.getElementById("motp");
+	if (motp)
+	{
+		document.getElementById("motpholder").innerHTML="<b>message of the page</b><br>"+motp.innerHTML;
+		motp.remove();
+	}
+	else
+	{
+		document.getElementById("motpholder").remove()
+	}
 
-    //fix links
-    const linksholder=document.getElementById("linksholder");
-    function buildLinksRecursive(path,links)
-    {
-        let indent=(path.split("/").length-2)*8;
+	//fix links
+	const linksholder=document.getElementById("linksholder");
+	function buildLinksRecursive(path,links)
+	{
+		let indent=(path.split("/").length-2)*8;
 
-        for (let i in links)
-        {
-            linkData=links[i];
+		for (let i in links)
+		{
+			linkData=links[i];
 
-            const linkIsHere=window.location.pathname==path+linkData.path || window.location.pathname==path+linkData.path+"/";
+			const linkIsHere=window.location.pathname==path+linkData.path || window.location.pathname==path+linkData.path+"/";
 
-            const link=document.createElement(linkIsHere?"b":"a");
-            link.style.paddingLeft=indent;
-            linksholder.appendChild(link);
-            
-            linksholder.appendChild(document.createElement("br"));
+			const link=document.createElement(linkIsHere?"b":"a");
+			link.style.paddingLeft=indent;
+			linksholder.appendChild(link);
+			
+			linksholder.appendChild(document.createElement("br"));
 
-            linkData.alias=("alias" in linkData)?linkData.alias:linkData.path;
-            link.innerHTML=linkData.alias;
-            
-            if (!linkIsHere)
-            {
-                link.href=linkData.fullPath?linkData.path:path+linkData.path;
-            }
+			linkData.alias=("alias" in linkData)?linkData.alias:linkData.path;
+			link.innerHTML=linkData.alias;
+			
+			if (!linkIsHere)
+			{
+				link.href=linkData.fullPath?linkData.path:path+linkData.path;
+			}
 
-            if ("links" in linkData)
-            {
-                buildLinksRecursive(path+linkData.path+"/",linkData.links);
-            }
-        }
-    }
-    buildLinksRecursive("/",sidebarLinks);
+			if ("links" in linkData)
+			{
+				buildLinksRecursive(path+linkData.path+"/",linkData.links);
+			}
+		}
+	}
+	buildLinksRecursive("/",sidebarLinks);
+	
+	// pick random art
+	const artSidebar=document.getElementById("artSidebar");
+	const commonArts=["stars.png","worms.png","fly.png","eyergyle.png"];
+	const rareArts=["mackwalk3dslow.gif"];
+	let artArray=Math.random()*200<1?rareArts:commonArts; // 1 in 200 chance
+	artSidebar.style.backgroundImage=`url("/images/decotiles/${artArray[Math.floor(Math.random()*artArray.length)]}")`;
 });
 
 const sidebarLinks=
 [
-    {
-        path:"",
-        alias:"home"
-    },
-    {
-        path:"games",
-        links:
-        [
-            {
-                path:"gmod",
-                alias:"garrys mod"
-            },
-        ]
-    },
-    // {
-    //     path:"devlogs",
-    //     links:
-    //     [
-    //         {
-    //             path:"clubofutility",
-    //             alias:"CLUB OF UTILITY"
-    //         },
-    //         {
-    //             path:"bulletheli",
-    //             alias:"BULLETHELI"
-    //         },
-    //         {
-    //             path:"daveyvs",
-    //             alias:"DAVEY vs THE BIG GUY"
-    //         },
-    //     ]
-    // },
-    {
-        path:"filedump",
-        alias:"file dump",
-        links:
-        [
-            {
-                path:"probots",
-                alias:"observation blog"
-            },
-        ]
-    },
+	{
+		path:"",
+		alias:"home"
+	},
+	{
+		path:"games",
+		links:
+		[
+			{
+				path:"gmod",
+				alias:"garrys mod"
+			},
+		]
+	},
+	// {
+	//     path:"devlogs",
+	//     links:
+	//     [
+	//         {
+	//             path:"clubofutility",
+	//             alias:"CLUB OF UTILITY"
+	//         },
+	//         {
+	//             path:"bulletheli",
+	//             alias:"BULLETHELI"
+	//         },
+	//         {
+	//             path:"daveyvs",
+	//             alias:"DAVEY vs THE BIG GUY"
+	//         },
+	//     ]
+	// },
+	{
+		path:"filedump",
+		alias:"file dump",
+		links:
+		[
+			{
+				path:"probots",
+				alias:"observation blog"
+			},
+		]
+	},
 ];

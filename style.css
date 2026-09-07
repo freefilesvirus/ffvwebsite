@@ -27,7 +27,7 @@ main
 	width:720px;
 }
 
-.sidebar,.box,.subbox,main
+.sidebar,.box,.subbox,main,.fadingSidebar
 {
 	text-align:center;
 
@@ -53,10 +53,20 @@ main
 {
 	background-image:url("images/argyle.png");
 	background-color:var(--menu-color);
+	background-attachment:fixed;
 }
 
 .subbox
 {
 	background-image:url("images/lines.png");
 	background-color:var(--submenu-color);
+	background-attachment:fixed;
+}
+
+@media only screen and (max-width:1211px)
+{
+	.fadingSidebar
+	{
+		display:none;
+	}
 }
