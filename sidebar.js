@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded",(event)=>
 	const rareArts=[
 			"/filedump/mack1/mackwalk3dslow.gif","/images/decotiles/skinny-stripping.png"
 	];
-	let artArray=Math.random()*200<1000?rareArts:commonArts; // 1 in 200 chance
+	let artArray=Math.random()*200<1?rareArts:commonArts; // 1 in 200 chance
 	artSidebar.style.backgroundImage=`url("${artArray[Math.floor(Math.random()*artArray.length)]}")`;
 });
 
