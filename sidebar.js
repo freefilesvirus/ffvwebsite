@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded",(event)=>
 	
 	// pick random art
 	const artSidebar=document.getElementById("artSidebar");
-	const commonArts=["stars.png","worms.png","fly.png","eyergyle.png","pipes.png","qte.png"];
+	const commonArts=["stars.png","worms.png","fly.png","eyergyle.png","pipes.png","qte.png","probots.png"];
 	const rareArts=["mackwalk3dslow.gif"];
 	let artArray=Math.random()*200<1?rareArts:commonArts; // 1 in 200 chance
 	artSidebar.style.backgroundImage=`url("/images/decotiles/${artArray[Math.floor(Math.random()*artArray.length)]}")`;
