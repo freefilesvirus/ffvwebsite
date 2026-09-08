@@ -70,10 +70,16 @@ document.addEventListener("DOMContentLoaded",(event)=>
 	
 	// pick random art
 	const artSidebar=document.getElementById("artSidebar");
-	const commonArts=["stars.png","worms.png","fly.png","eyergyle.png","pipes.png","qte.png","probots.png"];
-	const rareArts=["mackwalk3dslow.gif"];
-	let artArray=Math.random()*200<1?rareArts:commonArts; // 1 in 200 chance
-	artSidebar.style.backgroundImage=`url("/images/decotiles/${artArray[Math.floor(Math.random()*artArray.length)]}")`;
+	const commonArts=[
+			"/images/decotiles/stars.png","/images/decotiles/worms.png","/images/decotiles/fly.png",
+			"/images/decotiles/eyergyle.png","/images/decotiles/pipes.png","/images/decotiles/qte.png",
+			"/images/decotiles/probots.png"
+	];
+	const rareArts=[
+			"/filedump/mack1/mackwalk3dslow.gif","/images/decotiles/skinny-stripping.png"
+	];
+	let artArray=Math.random()*200<1000?rareArts:commonArts; // 1 in 200 chance
+	artSidebar.style.backgroundImage=`url("${artArray[Math.floor(Math.random()*artArray.length)]}")`;
 });
 
 const sidebarLinks=
