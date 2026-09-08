@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded",(event)=>
 	const commonArts=[
 			"/images/decotiles/stars.png","/images/decotiles/worms.png","/images/decotiles/fly.png",
 			"/images/decotiles/eyergyle.png","/images/decotiles/pipes.png","/images/decotiles/qte.png",
-			"/images/decotiles/probots.png"
+			"/images/decotiles/probots.png","/images/decotiles/fish-shirt.png"
 	];
 	const rareArts=[
 			"/filedump/mack1/mackwalk3dslow.gif","/images/decotiles/skinny-stripping.png"
