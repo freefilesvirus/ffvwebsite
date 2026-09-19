@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {background-color:#000000;}
+      * {color:#ff0000;}
+    </style>
+    <title>oservationblog</title>
+  </head>
+  <body>
+    <h1>OBSERVATION BLOG!</h1> written by "franklin" (observation bot<br>
+    
+    <h2>about</h2>
+    to those asking i was comissioned to write the abouts of my <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3153247644">friends/peers/some enemies</a>, their jobs and the like<br>
+    been told i dont talk great. dont be mean, im just a photographer<br>
+    click around! theres a saying that images reveal information<br>
+    
+    <h2 id="header">propots</h2>
+    <script>
+      const data=[
+        ["watchbot",
+        `name: franklin,so we dont really all have names but i dont like the industrytitle so i gave us names and only some of them respond to them:(<br><br>
+        this is me, i like to look at things and take pictures to document and i made the website<br>
+        i like making the website because it makes my miserable life better`],
+        ["copbot",
+        `name: johnny<br><br>
+        he will walkabouts and shoot at nasty little things. but ive seen him tweaked to shoot at good guys!`],
+        ["corpsebot",
+        `name:kramer after the best horror serios<br><br>
+        hes like soo tall and will burn up dead bodies by discharging his battery into them<br>
+        thats why hes so slow i think. because hes tired from not much energy to himself, puts it all into his work, which is very respectable i personally think`],
+        ["hoardbot",
+        `name: calvin<br><br>
+        i dont understand why they respect it<br>
+        all it does is steel and runs back to its little momy pole. then i go over to look and he knocks me over likeim dirt into the dirt<br>
+        i think he is dirt and all he touches`],
+        ["sawbot",
+        `name: spinly<br><br>
+        he also sucks he kills people`],
+        ["skaterbot",
+        `name: big owen<br><br>
+        acts well adjusted until you take your eye away then he comes over and tries to kill you with a grenade, not very parlimentary`],
+        ["scanbot",
+        `name: jack<br><br>
+        listn they say ai will steel your job and tHEY ARE RIGHT.<br>
+        he does everything i do except inferior because i take pictures and he just makes a little thing pop up in the air and everyone celebrates for some reason.<br>
+        i hate the little stealers more tha n the ones trying to kill me`],
+        ["fishbot",
+        `name: its just an animal. dont name an animal<br><br>
+        it likes the water more cause it can swim around but when its not in the wwater itll just kick around<br>
+        if you hit him it will jump around more lol!`],
+        ["hermitbot",
+        `name: little owen<br><br>
+        another theif. but he is so scared he cowers away from everyone<br>
+        if you dont youre giving the mouse the cookie because he is the mouse who steals whatever youre holding (gun, weapon,etc) then just run awy and drop it<br>
+        hes just hating for the sake of it he doesnt even do anything with hes takes!`],
+        ["charple",
+        `well he not like us but i do see him around a lot<br>
+        charple is a little scary at first but a good guy at heart`]
+      ]
+      data.forEach(d=>{document.write(`<img src="${d[0]}.jpg" title="${d[0]}" height="90" width="90" bio="${d[1]}" style="cursor: pointer;">`);});
+      document.write("<br>");
+      
+      const bio=document.createElement("div");
+      bio.innerHTML="click of something"
+      document.body.appendChild(bio);
+      
+      const header=document.getElementById("header")
+      
+      let last=null
+      
+      document.querySelectorAll("img").forEach(i=>{
+        i.addEventListener("click",()=>{
+          if (last!==null) {
+            last.setAttribute("height","90");
+            last.setAttribute("width","90");
+            last.setAttribute("style","cursor: pointer;");
+          }
+          last=i
+          
+          i.setAttribute("height","180");
+          i.setAttribute("width","180");
+          i.setAttribute("style","cursor: default;");
+          
+          bio.innerHTML=i.getAttribute("bio");
+          header.textContent=`propots (${i.getAttribute("title")})`
+        });
+      });
+    </script>
+  </body><br>
+  <footer>
+    <a href="/">< page host</a><br>
+    
+    <img src="https://web.archive.org/web/20090820060518/http://geocities.com/SunsetStrip/Frontrow/8467/bigfire.gif" title="cool">
+  </footer>
+</html>
+
