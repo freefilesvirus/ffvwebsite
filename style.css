@@ -42,7 +42,7 @@ body
 	margin:0px;
 }
 
-.box1,.box2,.bordered
+.box1,.box2,.bordered,.left-floating-img
 {
 	border-style:solid;
 	border-width:1px;
@@ -66,4 +66,12 @@ body
 {
 	background-image:url("images/lines.png");
 	background-color:var(--submenu-color);
+}
+
+.left-floating-img
+{
+	float:left;
+	margin-right:8px;
+	max-width:128px;
+	max-height:128px;
 }
