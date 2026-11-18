@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>freefilesvirus blog</title>
+	<description>stuff i write about when i think to write here.</description>
+	<link>https://www.freefilesvirus.com/blog/</link>
+	<lastBuildDate>
+		Thu, 05 Nov 2026 12:00:00 -0000
+	</lastBuildDate>
+	<ttl>1440</ttl>
+
+	<item>
+		<title>remember this guy?</title>
+		<description>
+			<![CDATA[<img src="https://www.freefilesvirus.com/images/ghost.gif" title="weemus the ghost"><br><br>tags: #website #weemus #boxes #ilovepreservation #GOOD]]>
+		</description>
+		<link>https://www.freefilesvirus.com/blog/11-5-26</link>
+		<pubDate>
+			Thu, 05 Nov 2026 12:00:00 -0000
+		</pubDate>
+	</item>
+
+	<item>
+		<title>the tag system</title>
+		<description>
+			<![CDATA[what are all these hashtags all over the place???<br><br>tags: #hashtag #yay #shortpost #TagSystem #TheNavigationBarIsUseless #ButTagsAreUseful #ButTagsAreMaybeUsefulAsterisk]]>
+		</description>
+		<link>https://www.freefilesvirus.com/blog/10-25-26</link>
+		<pubDate>
+			Sun, 25 Oct 2026 12:00:00 -0000
+		</pubDate>
+	</item>
+
+	<item>
+		<title>friends and cigarettes</title>
+		<description>
+			<![CDATA[talking about visiting seattle.<br><br>tags: #seattle #fainted #AddictivePersonality #lovemyfriends]]>
+		</description>
+		<link>https://www.freefilesvirus.com/blog/10-4-26</link>
+		<pubDate>
+			Sun, 04 Oct 2026 12:00:00 -0000
+		</pubDate>
+	</item>
+
+	<item>
+		<title>making physical cds for PHILIP ttw</title>
+		<description>
+			<![CDATA[my thoughts and the proccess on making physical copies of one of my games for the first time.<br><br>tags: #philip #ilovecds]]>
+		</description>
+		<link>https://www.freefilesvirus.com/blog/9-20-26</link>
+		<pubDate>
+			Sun, 20 Sep 2026 12:00:00 -0000
+		</pubDate>
+	</item>
+
+</channel>
+</rss>
